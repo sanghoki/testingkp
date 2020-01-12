@@ -17,7 +17,7 @@
         ResultSet rs;
 
         Class.forName("com.mysql.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12316313", "sql12316313", "Tk7s6xd1pe");
+         conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/dx4MOMIJOa", "dx4MOMIJOa", "3RfNgsCAlZ");
 
         pst = conn.prepareStatement("insert into kp(dbname,course,fee) values (?,?,?)");
         pst.setString(1, name1);
@@ -109,7 +109,7 @@
                                 ResultSet rs;
 
                                 Class.forName("com.mysql.jdbc.Driver");
-                                conn = DriverManager.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12316313", "sql12316313", "Tk7s6xd1pe");
+                                 conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/dx4MOMIJOa", "dx4MOMIJOa", "3RfNgsCAlZ");
 
                                 String query = "Select * from kp";
                                 Statement st = conn.createStatement();
