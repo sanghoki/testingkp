@@ -18,7 +18,7 @@
         ResultSet rs;
 
         Class.forName("com.mysql.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12316313", "sql12316313", "Tk7s6xd1pe");
+         conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/dx4MOMIJOa", "dx4MOMIJOa", "3RfNgsCAlZ");
 
         pst = conn.prepareStatement("update kp set dbname =? ,course =?, fee=? where id=?");
         pst.setString(1, name1);
@@ -59,7 +59,7 @@
                         ResultSet rs;
 
                         Class.forName("com.mysql.jdbc.Driver");
-                        conn = DriverManager.getConnection("jdbc:mysql://sql12.freemysqlhosting.net:3306/sql12316313", "sql12316313", "Tk7s6xd1pe");
+                         conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/dx4MOMIJOa", "dx4MOMIJOa", "3RfNgsCAlZ");
 
                         String id = request.getParameter("id");
 
