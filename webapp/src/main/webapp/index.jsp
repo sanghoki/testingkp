@@ -6,33 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*" %>
-<%
-    if (request.getParameter("submit") != null) {
-        String name1 = request.getParameter("name1");
-        String course = request.getParameter("course2");
-        String fee = request.getParameter("fee3");
-
-        Connection conn;
-        PreparedStatement pst;
-        ResultSet rs;
-
-        Class.forName("com.mysql.jdbc.Driver");
-         conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/dx4MOMIJOa", "dx4MOMIJOa", "3RfNgsCAlZ");
-
-        pst = conn.prepareStatement("insert into kp(dbname,course,fee) values (?,?,?)");
-        pst.setString(1, name1);
-        pst.setString(2, course);
-        pst.setString(3, fee);
-        pst.executeUpdate();
-%>
-<script>
-    alert("Data Di Input");
-</script>
-
-<%
-    }
-%>
-
 
 <!DOCTYPE html>
 <html>
@@ -103,24 +76,7 @@
                                 <th>Delete</th>
                             </tr>
 
-                            <%
-                                Connection conn;
-                                PreparedStatement pst;
-                                ResultSet rs;
-
-                                Class.forName("com.mysql.jdbc.Driver");
-                                 conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/dx4MOMIJOa", "dx4MOMIJOa", "3RfNgsCAlZ");
-
-                                String query = "Select * from kp";
-                                Statement st = conn.createStatement();
-
-                                rs = st.executeQuery(query);
-
-                                while (rs.next()) {
-                                    String id = rs.getString("id");
-
-
-                            %>
+           
 
                             <tr>
                                 <td><%=rs.getString("dbname")%></td>
@@ -129,11 +85,6 @@
                                 <td><a href="update.jsp?id=<%=id%>">EDIT</a></td>
                                 <td><a href="delete.jsp?id=<%=id%>">DELETE</a></td>
                             </tr>
-
-                            <%
-
-                                }
-                            %>
                     </table>
 
                 </div>
