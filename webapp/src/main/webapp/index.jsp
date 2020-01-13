@@ -75,16 +75,7 @@
                                 <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
-
-           
-
-                            <tr>
-                                <td><%=rs.getString("dbname")%></td>
-                                <td><%=rs.getString("course")%></td>
-                                <td><%=rs.getString("fee")%></td>
-                                <td><a href="update.jsp?id=<%=id%>">EDIT</a></td>
-                                <td><a href="delete.jsp?id=<%=id%>">DELETE</a></td>
-                            </tr>
+                  
                     </table>
 
                 </div>
